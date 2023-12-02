@@ -1,0 +1,43 @@
+{
+  "name": "@girth/db",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "push": "drizzle-kit push:pg",
+    "studio": "drizzle-kit studio",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../../.env --",
+    "seed": "pnpm with-env tsx ./seed.ts",
+    "db:introspect": "drizzle-kit introspect:pg",
+    "migrate": "pnpm with-env tsx ./migrate.ts",
+    "drop": "drizzle-kit drop",
+    "db:generate": "drizzle-kit generate:pg --config drizzle.config.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.29.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "@girth/eslint-config": "workspace:^0.2.0",
+    "@girth/prettier-config": "workspace:^0.1.0",
+    "@girth/tsconfig": "workspace:^0.1.0",
+    "dotenv-cli": "^7.3.0",
+    "drizzle-kit": "^0.20.6",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.2.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@girth/eslint-config/base"
+    ]
+  },
+  "prettier": "@girth/prettier-config"
+}
