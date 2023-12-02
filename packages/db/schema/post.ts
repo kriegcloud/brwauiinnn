@@ -1,5 +1,4 @@
 import { sql } from "drizzle-orm";
-// import { serial, timestamp, varchar } from "drizzle-orm/mysql-core";
 import { serial, timestamp, varchar } from "drizzle-orm/pg-core";
 
 import { pgTable } from "./_table";
