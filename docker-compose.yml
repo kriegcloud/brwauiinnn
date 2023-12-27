@@ -1,26 +1,23 @@
-version: "3.6"
-services:
-  postgres:
-    image: postgres:13
-    ports:
-      - "5450:5432" # expose pg on port 5450 to not collide with pg from elswhere
-    restart: always
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: "postgres"
-      POSTGRES_PASSWORD: "postgres"
-      POSTGRES_HOST_AUTH_METHOD: trust
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-  postgres_is_ready:
-    image: postgres
-    depends_on:
-      postgres:
-        condition: service_healthy
+version: '3.6'
 
-volumes:
-  db_data:
+services:
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    healthcheck:
+        test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-uroot", "-ppass"]
+        interval: 5s
+        timeout: 5s
+        retries: 20
+  mysql_is_ready:
+    image: mysql
+    depends_on:
+      db:
+        condition: service_healthy

@@ -19,11 +19,10 @@
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "typecheck": "turbo typecheck",
-    "scaffold": "pnpm db:up && pnpm db:push && pnpm pedophile",
+    "scaffold": "pnpm db:up && pnpm db:push",
     "db:up": "docker-compose up -d",
     "db:down": "docker-compose down",
-    "db:rape": "pnpm db:down && docker system prune -a -f",
-    "pedophile": "pnpx postgraphile -c \"postgresql://postgres:postgres@localhost:5450/postgres\" --watch --enhance-graphiql",
+    "db:nuke": "pnpm db:down && docker system prune -a -f",
     "with-env": "dotenv -e .env --"
   },
   "devDependencies": {

@@ -9,7 +9,7 @@
     "clean": "rm -rf .turbo node_modules",
     "lint": "eslint .",
     "format": "prettier --check . --ignore-path ../../.gitignore",
-    "push": "drizzle-kit push:pg",
+    "push": "drizzle-kit push:mysql",
     "studio": "drizzle-kit studio",
     "typecheck": "tsc --noEmit",
     "with-env": "dotenv -e ../../../.env --",
@@ -17,11 +17,11 @@
     "db:introspect": "drizzle-kit introspect:pg",
     "migrate": "pnpm with-env tsx ./migrate.ts",
     "drop": "drizzle-kit drop",
-    "db:generate": "drizzle-kit generate:pg --config drizzle.config.ts"
+    "db:generate": "drizzle-kit generate:mysql --config drizzle.config.ts"
   },
   "dependencies": {
     "drizzle-orm": "^0.29.0",
-    "pg": "^8.11.3"
+    "mysql2": "^3.6.5"
   },
   "devDependencies": {
     "@girth/eslint-config": "workspace:^0.2.0",
