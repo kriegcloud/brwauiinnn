@@ -10,11 +10,10 @@
   },
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "prettier": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.7"
+    "prettier": "^3.1.0"
   },
   "devDependencies": {
-    "@girth/tsconfig": "workspace:^0.1.0",
+    "@girth/tsconfig": "0.1.0",
     "typescript": "^5.2.2"
   },
   "prettier": "@girth/prettier-config"

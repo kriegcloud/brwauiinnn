@@ -12,17 +12,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@girth/auth": "workspace:^0.1.0",
-    "@girth/db": "workspace:^0.1.0",
+    "@girth/auth": "0.1.0",
+    "@girth/db": "0.1.0",
     "@trpc/client": "next",
     "@trpc/server": "next",
     "superjson": "2.2.0",
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@girth/eslint-config": "workspace:^0.2.0",
-    "@girth/prettier-config": "workspace:^0.1.0",
-    "@girth/tsconfig": "workspace:^0.1.0",
+    "@girth/eslint-config": "0.2.0",
+    "@girth/prettier-config": "0.1.0",
+    "@girth/tsconfig": "0.1.0",
     "eslint": "^8.53.0",
     "prettier": "^3.1.0",
     "typescript": "^5.2.2"

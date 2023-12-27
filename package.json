@@ -25,15 +25,15 @@
     "db:nuke": "pnpm db:down && docker system prune -a -f",
     "with-env": "dotenv -e .env --"
   },
-  "devDependencies": {
-    "@girth/prettier-config": "workspace:^0.1.0",
-    "@turbo/gen": "^1.10.16",
-    "prettier": "^3.1.0",
-    "turbo": "^1.10.16",
-    "typescript": "^5.2.2",
-    "dotenv-cli": "^7.3.0"
-  },
   "prettier": "@girth/prettier-config",
   "module": "index.ts",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@girth/prettier-config": "0.1.0",
+    "@turbo/gen": "^1.10.16",
+    "dotenv-cli": "^7.3.0",
+    "prettier": "^3.1.0",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
+  }
 }

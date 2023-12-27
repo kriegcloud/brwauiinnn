@@ -24,9 +24,9 @@
     "mysql2": "^3.6.5"
   },
   "devDependencies": {
-    "@girth/eslint-config": "workspace:^0.2.0",
-    "@girth/prettier-config": "workspace:^0.1.0",
-    "@girth/tsconfig": "workspace:^0.1.0",
+    "@girth/eslint-config": "0.2.0",
+    "@girth/prettier-config": "0.1.0",
+    "@girth/tsconfig": "0.1.0",
     "dotenv-cli": "^7.3.0",
     "drizzle-kit": "^0.20.6",
     "eslint": "^8.53.0",

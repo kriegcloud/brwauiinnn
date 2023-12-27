@@ -1,8 +1,8 @@
 {
   "name": "@girth/theme",
   "version": "0.1.0",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./index.ts",
+  "types": "./index.ts",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
@@ -11,25 +11,21 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@e2/configs": "0.1.0",
-    "@e2/helpers": "0.1.0",
-    "@e2/lib": "0.1.0",
-    "@e2/types": "0.1.0",
     "@mui/material": "^5.14.20"
   },
   "devDependencies": {
-    "@e2/eslint-config": "^0.2.0",
-    "@e2/prettier-config": "^0.1.0",
-    "@e2/tsconfig": "^0.1.0",
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
+    "@girth/eslint-config": "0.2.0",
+    "@girth/prettier-config": "0.1.0",
+    "@girth/tsconfig": "0.1.0",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0",
     "typescript": "^5.2.2"
   },
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@e2/eslint-config/base"
+      "@girth/eslint-config/base"
     ]
   },
-  "prettier": "@e2/prettier-config"
+  "prettier": "@girth/prettier-config"
 }

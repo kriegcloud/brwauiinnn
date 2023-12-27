@@ -12,20 +12,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@girth/db": "workspace:^0.1.0",
     "@auth/core": "^0.18.0",
     "@auth/drizzle-adapter": "^0.3.8",
+    "@girth/db": "0.1.0",
     "@t3-oss/env-nextjs": "^0.7.1",
-    "next": "^14.0.2",
+    "next": "^13.5.4",
     "next-auth": "5.0.0-beta.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@girth/eslint-config": "workspace:^0.2.0",
-    "@girth/prettier-config": "workspace:^0.1.0",
-    "@girth/tsconfig": "workspace:^0.1.0",
+    "@girth/eslint-config": "0.2.0",
+    "@girth/prettier-config": "0.1.0",
+    "@girth/tsconfig": "0.1.0",
     "eslint": "^8.53.0",
     "prettier": "^3.1.0",
     "typescript": "^5.2.2"

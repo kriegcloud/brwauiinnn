@@ -4,6 +4,11 @@ import { desc, eq, schema } from "@girth/db";
 
 import { createTRPCRouter, protectedProcedure, publicProcedure } from "../trpc";
 
+export const createPostSchema = z.object({
+        title: z.string().min(1),
+        content: z.string().min(1),
+      })
+
 export const postRouter = createTRPCRouter({
   all: publicProcedure.query(({ ctx }) => {
     // return ctx.db.select().from(schema.post).orderBy(desc(schema.post.id));
@@ -25,10 +30,7 @@ export const postRouter = createTRPCRouter({
 
   create: protectedProcedure
     .input(
-      z.object({
-        title: z.string().min(1),
-        content: z.string().min(1),
-      }),
+      createPostSchema
     )
     .mutation(({ ctx, input }) => {
       return ctx.db.insert(schema.post).values(input);
